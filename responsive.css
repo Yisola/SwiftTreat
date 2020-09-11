@@ -2,21 +2,170 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
+    font-size: 16px;
     height: 100%;
     width: 100%;
-    /* background-color: #1d90e2; */
 }
 
-.banner {
-    width: 100%;
-    height: 70%;
-    position: relative;
-    z-index: -1;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4)), url(https://www.medicalacademic.co.za/wp-content/uploads/2020/03/telemedicine-1.jpeg);
+*, * :before, *:after {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, p {
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (min-width: 550px) {
+    .banner-items {
+        max-width: 550px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (min-width: 765px) {
+    .banner-items {
+        max-width: 730px;
+        /* margin-left: 40px;
+        margin-right: 40px; */
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .rapid-response {
+        color: #4f567b;
+    }
+
+    .banner-box {
+        display: flex;
+        flex-wrap: wrap;
+    }
     
+    .dropdown-holder {
+        width: 50%;
+    }
+
+    #search {
+        width: 50%;
+    }
+
+    .box-container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .box {
+        width: 48.9%;
+    }
+
+    .service-box_maincontainer {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    
+
+    .figure-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        
+    }
+/* 
+    .specialist-img {
+        width: 50%;
+    }  */
+
+    figure {
+        width: 48%;
+        margin: 0;
+        padding: 6px;
+        
+    }
+
+    .services-box {
+        width: 45%;
+    }
+}
+
+@media screen and (min-width: 980px) {
+    .banner-items{
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+    }
+
+    .banner-items {
+        align-self: flex-start;
+        justify-items: flex-start;
+        /* margin-right: auto;
+        margin-left: auto; */
+        margin-left: 40px;
+        margin-right: 0;
+    }
+
+    .rapid-response {
+        font-size: 2.5rem;
+        color: #4f567b;
+        line-height: 1.4;
+        max-width: 600px;
+    }
+
+    .quality-health {
+        max-width: 500px;
+    }
+
+    .dropdown-holder {
+        width: 25%;
+    }
+
+    #search {
+        width: 25%;
+    }
+
+    .patient-whatwedo_container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .patient-doctor_container {
+        width: 50%;
+    }
+
+    .whatwedo-box_container {
+        width: 50% ;
+    }
+
+    .patient-doctor {
+        height: 350px;
+        object-fit: cover;
+    }
+
+    .services-box {
+        width: 30%;
+    }
+
+    figure {
+        width: 30%;
+        margin: 0;
+        padding: 0;
+    }
+
+
+
+
+
+
 }
 
 
