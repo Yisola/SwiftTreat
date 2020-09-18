@@ -11,7 +11,7 @@ html, body {
     box-sizing: border-box;
 }
 
-h1, h2, h3, h4, h5, p {
+h1, h2, h3, h4, h5, p, ul {
     margin: 0;
     padding: 0;
 }
@@ -56,6 +56,11 @@ nav ul li a {
     text-decoration: none;
 }
 
+.nav-btn:focus,
+.nav-btn:hover {
+    filter: brightness(120%) saturate(120%)
+}
+
 label #sign-one, label #sign-two {
     font-size: 30px;
     color: #5199fa;
@@ -80,6 +85,93 @@ label #sign-one, label #sign-two {
     height: 60px;
     width: 60px;
 }
+
+footer {
+    margin-top: 25px;
+    background-color: #060f1e;
+}
+
+.footer-container {
+    padding-top: 45px;
+    padding-left: 15px;
+    padding-bottom: 50px;
+    /* display: flex; */
+
+}
+
+.footer-header {
+    color: #fff;
+    margin: 25px 0; 
+    font-weight: 600; 
+    font-size: 1.5rem; 
+}
+
+.footer-content {
+    color: white;
+    margin-bottom: 30px;
+   
+}
+
+footer ul {
+    list-style: none;
+    
+}
+
+footer ul li {
+    margin-top: 13px;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: #fff;
+    
+}
+
+/* .item1 {
+    display: inline-flex;
+} */
+
+.footer-icons{
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+}
+
+.footercontact-icons {
+    width: 25px;
+    height: 25px;
+}
+
+.contact-container {
+    margin-bottom: 20px;
+    display: flex;
+}
+
+.subcontact-container {
+    display: inline-flex;
+    flex-direction: column;
+    margin-left: 15px;
+}
+
+.contact-header {
+    color: #fff;
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.contact-address {
+    color: #fff;
+    
+}
+
+.copyright {
+    background-color: #121f34;
+    color: white;
+    text-align: center;
+    padding: 35px 0;
+}
+
 
 
 
@@ -126,10 +218,39 @@ label #sign-one, label #sign-two {
 
 @media screen and (min-width: 980px) {
     
-nav {
+/* nav {
     background: rgba(0, 0, 0, 0);
-    /* border: unset; */
+
     box-shadow: unset;
+} */
+
 }
 
+
+@media screen and (min-width: 580px) {
+    .footer-container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .footer-items {
+        width: 50%;
+    }
+}
+
+
+@media screen and (min-width: 990px) {
+    .footer-items {
+        width: 25%;
+    }
+
+}
+
+@media screen and (min-width: 1180px) {
+    .footer-container {
+        max-width: 1200px; 
+        margin-right: auto;
+        margin-left: auto;
+
+    }
 }

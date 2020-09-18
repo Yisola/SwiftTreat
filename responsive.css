@@ -16,6 +16,18 @@ h1, h2, h3, h4, h5, p {
     padding: 0;
 }
 
+@media screen and (min-width: 360px) {
+    .ser-con__btn {
+        width: 50%;
+        min-width: 150px;
+    }
+
+    .button-a {
+        width: unset;
+    }
+
+}
+
 @media screen and (min-width: 550px) {
     .banner-items {
         max-width: 550px;
@@ -65,6 +77,7 @@ h1, h2, h3, h4, h5, p {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        justify-content: space-between;
     }
 
     
@@ -105,9 +118,10 @@ h1, h2, h3, h4, h5, p {
     .banner-items {
         align-self: flex-start;
         justify-items: flex-start;
-        /* margin-right: auto;
-        margin-left: auto; */
+        padding-left: 25px;
         margin-left: 40px;
+         /* margin-right: auto;
+        margin-left: auto; */
         margin-right: 0;
     }
 
@@ -161,11 +175,54 @@ h1, h2, h3, h4, h5, p {
         padding: 0;
     }
 
+    .goals-container {
+        padding: 50px 30px;
+        width: 45%;
+    }
 
+    .telehealth__goals {
+        font-size: 2.1rem;
+    }
 
-
-
-
+    .telehealth-goal__list {
+        font-size: 1.2rem;
+    }
 }
 
+@media screen and (min-width: 1190px) {
+      .banner-items {
+          align-items: center;
+          justify-content: center;
+          padding-left: 180px;
+      }
 
+      .ser-con__div {
+          width: 100%;
+          justify-content: unset;
+      }
+
+    .patient-whatwedo_container {
+        max-width: 1170px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .mainour-services_container {
+        background-color: #f4f6fe;
+    }
+
+    .our-services_container {
+        max-width: 1170px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .specialist-container {
+        max-width: 1170px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    
+
+}

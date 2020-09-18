@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="shared.css">
+    <link rel="stylesheet" href="bookappointment.css">
+    <script src="https://kit.fontawesome.com/a236e329c0.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <div id="swift-logo">
+        <img src="images/swift treat logo2.png" alt="" id="logo">
+        <h1>Swift Treat</h1>
+    </div>
+
+        <input type="checkbox" id="res-menu">
+        <label for="res-menu">
+            <i class="fa fa-bars" id="sign-one"></i>
+            <i class="fa fa-times" id="sign-two"></i>
+        </label>
+
+        <ul>
+            <li class="nav-btn"><a href="index.html">Home</a></li>
+            <li class="nav-btn"><a href="">About</a></li>
+            <li class="nav-btn"><a href="">Services</a></li>
+            <li class="nav-btn"><a href="">Contact</a></li>
+        </ul> 
+    </nav>
+
+    
+    <div class="body-container">
+
+    <h2>BOOK AN APPOINTMENT</h2>
+
+    <form>
+        <div class="dropdown-container">
+
+            <div class="dropdown-holder ">
+                <select name="title">
+                    <option>Mr</option>
+                    <option>Mrs</option>
+                    <option>Miss</option>
+                </select><br>
+                <img src="images/drop-down-arrow.svg" alt="">
+            </div>
+        </div>
+
+        <div>
+            <input name="first name" type="text" class="form-control" required data-error="Please enter your first name" placeholder="e.g Henry"><br>
+        </div>
+
+        <div>
+            <input name="middle name" type="text" class="form-control" required data-error="Please enter your middle name" placeholder="e.g Adejola"><br>
+        </div>
+
+        <div>
+            <input name="surname" type="text" class="form-control" required data-error="Please enter your surname" placeholder="e.g Arinze"><br>
+        </div>
+
+        <div class="dropdown-container">
+            <div class="dropdown-holder">
+                <select name="gender">
+                    <option>Male</option>
+                    <option>Female</option>
+                </select><br>
+                <img src="images/drop-down-arrow.svg" alt="">
+            </div>
+        </div>
+
+        <div>
+            <input name="date of birth" type="text" class="form-control" required data-error="Please fill your date of birth" placeholder="Please Select"><br>
+        </div>
+        
+        <div>
+            <input name="email address" type="text" class="form-control" required data-error="Please fill your email address" placeholder="e.g damola@yahoo.com"><br>
+        </div>
+
+        <div>
+            <input name="mobile number" type="text" class="form-control" required data-error="Please enter your mobile number" placeholder="e.g 08080801212"><br>
+        </div>
+
+        <div>
+            <textarea name="Your Message" class="form-control" placeholder="Your Message" cols="5" rows="7"></textarea>
+        </div>
+
+        <div class="break"></div>
+
+        <a href="" class="button-a"><button formaction="page2.html" id="submit">Submit</button></a>
+
+    </form>
+    </div>
+
+
+
+
+</body>
+</html>
