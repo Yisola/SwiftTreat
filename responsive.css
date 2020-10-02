@@ -39,8 +39,6 @@ h1, h2, h3, h4, h5, p {
 @media screen and (min-width: 765px) {
     .banner-items {
         max-width: 730px;
-        /* margin-left: 40px;
-        margin-right: 40px; */
         margin-right: auto;
         margin-left: auto;
     }
@@ -54,8 +52,13 @@ h1, h2, h3, h4, h5, p {
         flex-wrap: wrap;
     }
     
-    .dropdown-holder {
+    .custom-select-wrapper {
         width: 50%;
+        padding-right: 28px;
+    }
+
+    .custom-options {
+        width: 70%;
     }
 
     #search {
@@ -87,19 +90,13 @@ h1, h2, h3, h4, h5, p {
         flex-direction: row;
         flex-wrap: wrap;
         align-items: center;
-        justify-content: space-between;
-        
+        justify-content: space-between;   
     }
-/* 
-    .specialist-img {
-        width: 50%;
-    }  */
 
     figure {
         width: 48%;
         margin: 0;
-        padding: 6px;
-        
+        padding: 6px;   
     }
 
     .services-box {
@@ -120,9 +117,11 @@ h1, h2, h3, h4, h5, p {
         justify-items: flex-start;
         padding-left: 25px;
         margin-left: 40px;
-         /* margin-right: auto;
-        margin-left: auto; */
         margin-right: 0;
+    }
+
+    .banner-box {
+        width: 80%;
     }
 
     .rapid-response {
@@ -136,8 +135,12 @@ h1, h2, h3, h4, h5, p {
         max-width: 500px;
     }
 
-    .dropdown-holder {
+    .custom-select-wrapper {
         width: 25%;
+    }
+
+    .custom-options {
+        width: 140%;
     }
 
     #search {
@@ -196,6 +199,14 @@ h1, h2, h3, h4, h5, p {
           padding-left: 180px;
       }
 
+      .banner-box {
+        width: 100%;
+    }
+
+    .custom-options {
+        width: 190%;
+    }
+
       .ser-con__div {
           width: 100%;
           justify-content: unset;
@@ -221,8 +232,6 @@ h1, h2, h3, h4, h5, p {
         max-width: 1170px;
         margin-right: auto;
         margin-left: auto;
-    }
-
-    
+    }  
 
 }

@@ -95,8 +95,6 @@ footer {
     padding-top: 45px;
     padding-left: 15px;
     padding-bottom: 50px;
-    /* display: flex; */
-
 }
 
 .footer-header {
@@ -126,10 +124,6 @@ footer ul li a {
     color: #fff;
     
 }
-
-/* .item1 {
-    display: inline-flex;
-} */
 
 .footer-icons{
     height: 40px;
@@ -214,16 +208,6 @@ footer ul li a {
     #res-menu:checked~label #sign-two {
         display: block;
     }
-}
-
-@media screen and (min-width: 980px) {
-    
-/* nav {
-    background: rgba(0, 0, 0, 0);
-
-    box-shadow: unset;
-} */
-
 }
 
 

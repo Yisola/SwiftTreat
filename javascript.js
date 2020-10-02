@@ -11,38 +11,17 @@ $(".services-box").on("mouseenter", function(){
     $(this).find(".read-more").css("color", "#207ef7");
 });
 
-// $(".ser-con__btn").hover(function(){
-//     $(".service-btn").
-    
-// })
+for (const dropdown of document.querySelectorAll(".custom-select-wrapper")) {
+    dropdown.addEventListener('click', function() {
+        this.querySelector('.custom-select').classList.toggle('open');
+    })
+}
 
+window.addEventListener('click', function(e) {
+    for (const select of document.querySelectorAll('.custom-select')) {
+        if (!select.contains(e.target)) {
+            select.classList.remove('open');
+        }
+    }
+});
 
-// $("button").on("mouseleave", function(){
-//     $(this).css("font-weight", "normal");
-//  }); */
-
-// //  $('div').fadeOut();
- 
-//  $("button").on("click", function(){
-//     $('div').fadeOut(1000, function(){
-//         $(this).remove();
-//     });
-//  });
-
-// $(".ser-con__btn").on("mouseenter", function(){
-//     $(".service-btn").fadeIn(700, function(){
-//         $(this).css({
-//             backgroundColor: "#0f123b",
-//             // color: "#fff"
-//         });
-//     });
-//  });
-
-//  $(".ser-con__btn").on("mouseleave", function(){
-//     $(".service-btn").fadeOut(700, function(){
-//         $(this).css({
-//             backgroundColor: "#207ef7",
-//             // color: "#fff"
-//         });
-//     });
-//  });

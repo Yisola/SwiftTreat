@@ -32,6 +32,19 @@ h1, h2, h3, h4, h5, p {
     margin: 80px 13px 50px 13px;
 }
 
+.banner-box {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 30px;
+    border: 1px solid #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 0 11px #ccc;
+    background-color: #ffffff;
+    margin-top: 25px;
+    margin-right: 5px;
+    width: 100%;
+}
+
 .rapid-response {
     color: #0f123b;
 }
@@ -44,58 +57,108 @@ h1, h2, h3, h4, h5, p {
     line-height: 1.4;
 }
 
-select {
-    padding: 12px 20px;
-    color: #4e4e59;
-    font-weight: 600;
-    font-size: 1rem;
-    background-color: #fff;
-    outline: none;
-    width: 100%;
-    appearance: none;
-    border: none;
-}
 
-#select-image {
-    align-self: baseline;
-}
-
-.dropdown-holder {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.custom-select-wrapper {
     position: relative;
-    border-radius: 7px;
-}
-
-select {
-    border: none;
-    outline: none;
+    user-select: none;
     width: 100%;
 }
+.custom-select {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-color: #fff;
 
-.dropdown-holder>img {
+}
+.custom-select__trigger {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12 20px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #4e4e4e;
+    height: 40px;
+    line-height: 40px;
+    cursor: pointer;
+    border-color: #fff;
+}
+.custom-options {
     position: absolute;
-    right: 7%;
+    display: block;
+    top: 100%;
+    left: 0;
+    right: 0;
+    width: 80%;
+    border-top: 0;
+    background: #fff;
+    transition: all 0.5s;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    z-index: 2;
+    padding-bottom: 20px;
+    box-shadow: 0 0 2px #ddd;
+}
+.custom-select.open .custom-options {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+}
+.custom-option {
+    position: relative;
+    display: block;
+    padding: 0 22px 0 22px;
+    color: #6b615f;
+    line-height: 40px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.custom-option:hover {
+    cursor: pointer;
+    background-color: #207ef7;
+    color: #fff;
+}
+.custom-option.selected {
+    color: #4e4e4e;
+}
+
+.custom-option.selected:hover {
+    color: #fff;
+}
+
+
+.arrow {
+    position: relative;
     height: 8px;
     width: 8px;
 }
-
-.dropdown-holder select:focus~img {
-    display: none;
+.arrow::before, .arrow::after {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    width: 0.15rem;
+    height: 100%;
+    transition: all 0.5s;
 }
-
-.banner-box {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 10px 30px;
-    border: 1px solid #ffffff;
-    border-radius: 20px;
-    box-shadow: 0 0 11px #ccc;
-    background-color: #ffffff;
-    margin-top: 25px;
-    margin-right: 5px;
+.arrow::after {
+    left: -2.5px;
+    transform: rotate(-45deg);
+    background-color: #999999;
+}
+.arrow::before {
+    left: 2.5px;
+    transform: rotate(45deg);
+    background-color: #999999;
+}
+.open .arrow::after {
+    left: -2.5px;
+    transform: rotate(45deg);
+}
+.open .arrow::before {
+    left: 2.5px;
+    transform: rotate(-45deg);
 }
 
 #search {
@@ -112,7 +175,7 @@ select {
 }
 
 #search:hover, #search:active {
-    border: 1px solid #5199fa;
+    background-color:  #5199fa;
 }
 
 #search-p {
@@ -143,7 +206,6 @@ select {
     border-radius: 25px;
     border: none;
     outline: none;
-    /* margin: 0 30px; */
     padding: 15px 0;
     font-weight: 400;
 }
@@ -152,36 +214,30 @@ select {
     margin: 8px;
     width: 100%;
     text-decoration: none;
-    /* width: 100%; */
 }
 
 .service-btn {
-    /* background-color: #207ef7; */
     background-size: 200% 100%;
     background-image: linear-gradient(to right, #0f123b 50%, #207ef7 50%);
     transition: background-position 0.3s linear;
 }
 
 .service-btn:hover, .service-btn:active {
-    /* background-color: #0f123b; */
     background-position: 100% 0;
 }
 
 .contact-btn {
-    /* background-color: #0f123b; */
     background-size: 200% 100%;
     background-image: linear-gradient(to right, #207ef7 50%, #0f123b 50%);
     transition: background-position 0.3s linear;
 }
 
 .contact-btn:hover, .contact-btn:active {
-    /* background-color: #207ef7; */
     background-position: 100% 0;
 }
 
 .patient-doctor {
     height: auto;
-    /* max-width: 100%; */
     width: 100%;
     border-top-right-radius: 8px;
     border-top-left-radius: 40px;
@@ -314,21 +370,17 @@ select {
     border: 1px solid #ffffff;
     border-radius: 10px;
     margin: 25px 14px 25px 14px;
-    /* background-color: #fff;  */
     background-size: 100% 200%;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-image: linear-gradient(to bottom, #fff 50%, #207ef7 50%);
-    transition: background-position 0.5s linear;
+    transition: background-position 0.3s linear;
 }
 
 .services-box:hover,
 .services-box:active {
-    /* background-color: #207ef7; */
     background-position: 0 100%;
-    /* color: #fff; */
-  
 }
 
 .our-services_icon {
@@ -368,7 +420,6 @@ select {
 }
 
 .specialist-container {
-    /* margin: 30px 10px; */
     padding: 15px;
     display: flex;
     align-items: center;
@@ -381,7 +432,6 @@ select {
     width: 100%;
     max-width: 400px;
     object-fit: cover;
-    /* padding: 0 13px; */
     border-radius: 20px;
     margin-top: 25px;
 }
@@ -390,7 +440,6 @@ select {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* width: 100%; */
 }
 
 figure {
@@ -402,7 +451,6 @@ figcaption {
     color:#0f123b ;
     text-align: center;
     font-weight: 600;
-    /* margin: 12px 0 7px 0; */
 }
 
 .specialist-description {
@@ -422,13 +470,10 @@ figcaption {
 }
 
 .goals-container {
-    /* padding-left: 15px;
-    padding-right: 20px; */
     background-color: #f4f6fe;
     border-radius: 13px;
     margin: 0 5px;
     padding: 40px 20px 40px 15px;
-
 }
 
 .telehealth__goals {
@@ -437,9 +482,6 @@ figcaption {
     margin-bottom: 20px;
     font-weight: 600;
     font-size: 1.5rem;
-    /* padding-top: 15px; */
-    /* padding-left: 23px; */
-    /* padding-left: 10px; */
 }
 
 .telehealth-goal__list {
@@ -447,8 +489,6 @@ figcaption {
     margin-top: 15px;
     font-weight: 400;
     font-size: 1rem;
-    /* padding-left: 20px;
-    padding-right: 15px; */
 }
 
 
