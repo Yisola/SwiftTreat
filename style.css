@@ -25,11 +25,12 @@ h1, h2, h3, h4, h5, p {
     background-repeat: no-repeat;
     background-size: cover;
     box-sizing: border-box;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4)), url(https://www.medicalacademic.co.za/wp-content/uploads/2020/03/telemedicine-1.jpeg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4)), url(images/male\ background\ image.jpg);
 }
 
 .banner-items {
     margin: 80px 13px 50px 13px;
+    padding-top: 40px;
 }
 
 .banner-box {
@@ -51,10 +52,11 @@ h1, h2, h3, h4, h5, p {
 
 .quality-health {
     margin-top: 25px;
-    color: #eee;
+    color: #fff;
     font-size: 1.2rem;
-    font-weight: 600;
-    line-height: 1.4;
+    font-weight: 400;
+    line-height: 1.8;
+    font-family: "Roboto", sans-serif;
 }
 
 
@@ -489,6 +491,7 @@ figcaption {
     margin-top: 15px;
     font-weight: 400;
     font-size: 1rem;
+
 }
 
 
